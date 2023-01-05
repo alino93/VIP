@@ -6,8 +6,8 @@ from scipy.io import savemat
 import tensorflow as tf
 import keras.backend as K
 
-### accCost 0: none ### 1: acc cost as angle vector ### 2: acc cost as MAE
-acc = 2
+### accCost 0: none ### 1: acc cost as a vector ### 2: acc cost as MAE
+acc = 0
 
 
 def get_data(Xi, Yi, N_TIME_STEPS = 100, STEP = 1): #, LEN, N_TIME_STEPS, STEP
@@ -57,25 +57,25 @@ if acc >= 1:
 
 
 # process data
-data = get_data(N_TIME_STEPS=100, STEP=1, Xi=Xt, Yi=Yt)
+data = get_data(N_TIME_STEPS=500, STEP=1, Xi=Xt, Yi=Yt)
 
 # load trained model weights
 if acc==0:
         # model w/o acc
         print("Running net without acceleration ...")
-        model = tf.keras.models.load_model('./results/model_nyQuat_w100_s1',
+        model = tf.keras.models.load_model('./models/model_nyQuat_w500_s1',
                                            custom_objects={'mean_angle_btw_vectors': mean_angle_btw_vectors})
 
 elif acc==1:
         # model w acc with vector angle cost func
         print("Running net with acceleration and vector angle cost function...")
-        model = tf.keras.models.load_model('./results/model_nyQuatAccPlus_w100_s1',
+        model = tf.keras.models.load_model('./models/model_nyQuatAcc_w100_s1',
                                            custom_objects={'mean_angle_btw_vectors': mean_angle_btw_vectors})
 
 else:
         # model w acc with MAE cost func
         print("Running net with acceleration and MAE around each axis cost function...")
-        model = tf.keras.models.load_model('./results/model_nyQuatAccPlusCost_w100_s1',
+        model = tf.keras.models.load_model('./models/model_nyQuatAccPlusCost_w100_s1',
                                            custom_objects={'mean_angle_btw_vectors': mean_angle_btw_vectors,
                                                            'mae_acc_fn': mae_acc_fn})
 
