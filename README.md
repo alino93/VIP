@@ -1,6 +1,8 @@
 # VIP
 Vector-based Inertial Poser for human posture estimation from sparse IMUs
 
+[![Watch the video](https://github.com/alino93/VIP/blob/main/assets/Annotation%202023-01-04%20215912.jpg)](https://github.com/alino93/VIP/blob/main/assets/SMPLPlot.mp4)
+
 ORB-SLAM3 is originally from [here](https://github.com/UZ-SLAMLab/ORB_SLAM3). This modified version is forked from [here](https://github.com/jahaniam/orbslam3_docker). 
 Articulate utils and physics version is inspired from [here](https://vcai.mpi-inf.mpg.de/projects/PhysCap/data/physcap.pdf) and [here](https://github.com/Xinyu-Yi/PIP).
 
