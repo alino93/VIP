@@ -2,6 +2,7 @@
 Vector-based Inertial Poser for human posture estimation from sparse IMUs
 
 https://user-images.githubusercontent.com/73147643/210700673-7e0e1f9e-5a69-41a0-b49b-f583c9ef1a07.mp4
+
 https://user-images.githubusercontent.com/73147643/210700682-03c5eda6-c545-4c37-9fe8-beb4ef6b2572.mp4
 
 ORB-SLAM3 is originally from [here](https://github.com/UZ-SLAMLab/ORB_SLAM3). This modified version is forked from [here](https://github.com/jahaniam/orbslam3_docker). 
