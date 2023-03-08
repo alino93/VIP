@@ -70,6 +70,7 @@ Adjust the physics hyperparameters in `physics_parameters.json`
 
 If you find the project helpful, please consider citing us:
 
+<!--
 ```
 @InProceedings{,
   author = {Nouriani Ali, Rajamani Rajesh, McGovern Robert},
@@ -79,3 +80,4 @@ If you find the project helpful, please consider citing us:
   year = {2023}
 }
 ```
+-->
